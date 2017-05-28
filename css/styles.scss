@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url(https://fonts.googleapis.com/css?family=OpenSans:400,900);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+body {
+    background-color: #EAF0F1;
+}
+
+.main-container {
+    width: 60%;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #ccc;
+    overflow: hidden;
+
+    .form-header {
+        background-color: #FC501E;
+        color: white;
+        padding: 20px;
+        font-weight: bold;
+        font-size: 1em;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+
+        .form-group {
+            flex: 1;
+            padding: 5px;
+           
+           & label {
+            font-size: 1em;
+            color: black;
+            font-weight: 300;
+            padding-left: 0;
+           }
+
+            .input-group {
+                display: flex;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+            
+                .glyphicon { 
+                    background-color: #ccc;
+                    padding: 6px;
+                    top: 0;
+                }
+
+                .form-input {
+                    border: none;
+                    flex: 2;
+                    padding: 0 5px;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .form-textarea {
+                    resize: vertical;
+                }
+            }
+        }
+    }
+}
+
+.button {
+    background-color: #FC501E;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    color: white;
+
+        &:hover {
+            background-color: #727272;
+            cursor: pointer;
+        }
+}
+
+@media only screen and (max-width: 768px) {
+    .main-container {
+        width: 80%;
+
+        .form-container {
+            display: block;
+            padding: 0 10px;
+
+            &:last-child {
+                margin-top: 10px;
+            }
+        }
+        
+        .button {
+            margin-top: 10px;
+        }
+    }
+} 
